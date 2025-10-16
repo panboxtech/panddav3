@@ -1,0 +1,69 @@
+<section class="card clients-list" id="view-clientes">
+  <div class="toolbar">
+    <div>
+      <button id="btn-new-client" class="btn primary">Novo Cliente</button>
+      <select id="filter-select" class="input" style="width:220px;margin-left:8px">
+        <option value="all">Todos</option>
+        <option value="vencendo">Vencendo <= 3 dias</option>
+        <option value="vencidos30">Vencidos < 30 dias</option>
+        <option value="vencidos">Todos Vencidos</option>
+      </select>
+    </div>
+    <div class="row">
+      <label class="small-muted">Ordenar:</label>
+      <select id="order-select" class="input" style="width:180px">
+        <option value="vencimento">Por data de vencimento</option>
+        <option value="nome">Por nome</option>
+      </select>
+    </div>
+  </div>
+
+  <table class="table" id="clientes-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Plano</th>
+        <th>Vencimento</th>
+        <th>Telas</th>
+        <th>Progresso</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <template id="client-row-template">
+    <tr>
+      <td class="td-nome"></td>
+      <td class="td-tel"></td>
+      <td class="td-plano"></td>
+      <td class="td-venc"></td>
+      <td class="td-telas"></td>
+      <td class="td-progress"></td>
+      <td class="td-actions"></td>
+    </tr>
+  </template>
+
+  <div id="client-form-modal" style="display:none;margin-top:12px" class="card">
+    <h3 id="form-title">Novo Cliente</h3>
+    <div class="form-row"><input id="f-nome" class="input" placeholder="Nome" /></div>
+    <div class="form-row"><input id="f-tel" class="input" placeholder="Telefone (somente números)" /></div>
+    <div class="form-row">
+      <select id="f-plano" class="input"></select>
+      <select id="f-servidor1" class="input"></select>
+    </div>
+    <div class="form-row">
+      <input id="f-telas" class="input" type="number" min="1" placeholder="Telas" />
+      <button id="btn-add-ponto" class="btn">Adicionar Ponto</button>
+    </div>
+
+    <div id="pontos-list"></div>
+
+    <div class="row" style="margin-top:8px">
+      <button id="btn-save-client" class="btn primary">Salvar</button>
+      <button id="btn-cancel-client" class="btn ghost">Cancelar</button>
+      <div id="form-error" class="small-muted" style="margin-left:8px"></div>
+    </div>
+  </div>
+</section>
