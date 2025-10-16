@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard Streaming - Protótipo</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/clientes.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Dashboard Streaming - Protótipo</h1>
+    <nav>
+      <button data-route="clientes">Clientes</button>
+      <button data-route="planos">Planos</button>
+      <button data-route="servidores">Servidores</button>
+      <button data-route="admin">Admin</button>
+    </nav>
+  </header>
+
+  <main id="app-root" class="app-root">
+    <!-- views serão carregadas aqui -->
+  </main>
+
+  <script src="js/dom-utils.js"></script>
+  <script src="js/mock-provider.js"></script>
+  <script src="js/supabase-service.js"></script>
+  <script src="js/entities/plano.js"></script>
+  <script src="js/entities/assinatura.js"></script>
+  <script src="js/entities/cliente.js"></script>
+  <script src="js/app-router.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
