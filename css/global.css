@@ -1,0 +1,28 @@
+:root{
+  --bg:#f5f7fb;
+  --card:#fff;
+  --accent:#2b6cb0;
+  --danger:#e53e3e;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Arial,sans-serif}
+body{margin:0;background:var(--bg);color:#111}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:linear-gradient(90deg,#0b57a4,#2382d6);color:#fff}
+.topbar nav button{margin-left:8px;padding:8px 12px;border-radius:6px;border:none;background:rgba(255,255,255,0.12);color:#fff;cursor:pointer}
+.app-root{padding:20px;max-width:1100px;margin:20px auto}
+.card{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 2px 6px rgba(11,26,40,0.06)}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:8px;border-bottom:1px solid #eef2f7;text-align:left}
+.btn{padding:6px 10px;border-radius:6px;border:none;cursor:pointer}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{background:transparent;border:1px solid #ddd}
+.btn.warn{background:#f6ad55;color:#111}
+.btn.danger{background:var(--danger);color:#fff}
+.small{font-size:12px;padding:4px 6px}
+.row{display:flex;gap:8px;align-items:center}
+.form-row{display:flex;gap:8px;margin-bottom:8px}
+.input,select{padding:8px;border:1px solid #e6edf3;border-radius:6px;width:100%}
+.toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.toast{position:fixed;right:20px;bottom:20px;background:#111;color:#fff;padding:10px 14px;border-radius:8px;opacity:0.95}
+.small-muted{color:var(--muted);font-size:13px}
+.indicator{font-weight:600}
